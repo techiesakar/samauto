@@ -1,0 +1,65 @@
+/* Importing the required css */
+
+@import url("./assets/css/fonts.css");
+@import url("./assets/css/utilities.css");
+
+
+:root {
+    --primary: rgb(255, 191, 48);
+    --secondary: rgb(0, 120, 255);
+    --secondary-light: rgb(0, 205, 255);
+    --text: rgb(13, 13, 12);
+    --text-muted: rgb(180, 178, 178);
+}
+
+/* Normalization */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s linear;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: 1px solid rgb(212, 209, 209);
+    border-radius: 4px;
+    height: 34px;
+    padding: 3px 4px;
+}
+
+input::placeholder {
+    color: var(--text-muted)
+}
+
+input:focus::placeholder {
+    visibility: hidden;
+}
+
+input:focus {
+    background-color: var(--primary);
+    color: white
+}
+
+button {
+    background-color: var(--primary);
+    outline: none;
+    border: 0;
+    height: 34px;
+    padding: 3px 10px;
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-light);
+}
+
+/*  */
