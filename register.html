@@ -1,11 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register - SamAuto</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="event.js" defer></script>
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="container header-wrapper flex justify-between items-center">
+            <a href="index.html" class="header-logo active-link">
+                <img class="header-logo" src="assets/images/Logo-Light.png" />
+            </a>
+
+            <nav class="flex justify-between items-center">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="about.html">
+                    About Us
+                </a>
+                <a href="seller.html">
+                    Seller
+                </a>
+                <a href="cars.html">
+                    Models
+                </a>
+
+            </nav> <a href="search.html" class="search-icon-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <div class="user-icon-wrapper">
+                <i class="fa-regular fa-user icon"></i>
+                <div class="auth-card text-center">
+                    <a href="register.html" class=" btn btn-primary">
+                        Register your account
+                    </a>
+                    <p class="text-sm">Or</p>
+                    <a href="login.html" class=" btn btn-outline">
+                        Login as Seller
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="form-section container">
+            <div class="form-wrapper">
+                <div class="title-wrapper">
+                    <h2>Sign Up</h2>
+                    <p>Register as Seller</p>
+                </div>
+                <form name="signupForm" class="signup-form" onsubmit="validateForm(event)">
+                    <div class="form-field">
+                        <label for="name">Company Name
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="name" required>
+                        <span class="error-message name-error-message"></span>
+
+                    </div>
+                    <div class="form-field">
+                        <label for="address">Address
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="address" required>
+                        <span class="error-message address-error-message"></span>
+
+                    </div>
+                    <div class="form-field">
+                        <label for="agentName">Agent Name
+                        </label>
+                        <input type="text" name="agentName">
+                        <span class="error-message agentName-error-message"></span>
+
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Company Phone
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="phone" required>
+                        <span class="error-message phone-error-message"></span>
+
+                    </div>
+
+                    <div class="form-field">
+                        <label for="agentPhone">Agent Phone
+                        </label>
+                        <input type="text" name="agentPhone">
+                        <span class="error-message agentPhone-error-message"></span>
+
+                    </div>
+
+
+                    <div class="form-field">
+                        <label for="username">Username
+                            <span>*</span>
+                        </label>
+                        <input type="text" name="username" required>
+                        <span class="error-message username-error-message"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email
+                            <span>*</span>
+                        </label>
+                        <input type="email" name="email" required>
+                        <span class="error-message email-error-message"></span>
+
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Password <span>*</span></label>
+                        <input type="password" name="password" required>
+                        <span class="error-message password-error-message"></span>
+
+                    </div>
+
+                    <button>Sign Up</button>
+                </form>
+                <p class="change-mind">
+                    Already have an account? <a href="login.html">Login</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="top-footer">
+            <div class="container flex justify-between  top-footer-wrapper">
+                <!-- Footer About -->
+                <div class="footer-widget">
+                    <a href="index.html">
+                        <img src="assets/images/Logo-Dark.png" alt="" class="footer-logo">
+                    </a>
+                    <p>
+                        SamAuto is Australia’s top car listing platform, connecting multiple dealers with buyers.
+                    </p>
+                    <div class="footer-contact-info">
+                        <div class="contact-list"></div>
+                        <div class="contact-list"></div>
+                    </div>
+                    <div class="footer-social space-y-6">
+                        <h4>Follow Us</h4>
+                        <div class="icon-wrapper flex items-center">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Footer Quick Links -->
+                <div class="footer-widget">
+                    <h5 class="widget-title">Quick Links</h5>
+                    <nav class="quick-links flex flex-col">
+                        <a href="index.html">
+                            Home
+                        </a>
+                        <a href="cars.html">
+                            Models
+                        </a>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </nav>
+                </div>
+
+
+
+
+                <!-- Footer Product -->
+                <div class="footer-widget car-list-widget">
+                    <h5 class="widget-title">Popular Cars</h5>
+                    <div class="flex flex-col car-items-wrapper">
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-1.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Ford Mustang Cabrio
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-2.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Porsche 911 Turbo
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-3.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Lamborghini Urus
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer Contact -->
+                <div class="footer-widget contact-widget">
+                    <h5 class="widget-title">Contact Us</h5>
+                    <!-- location -->
+                    <div class="flex">
+                        <i class="fa-solid fa-location-dot icon"></i>
+                        <p>Sam St, Lievrpool NSW 2170, Australia</p>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <a href="mailto:contact@samauto.com.au">
+                            contact@samauto.com.au</a>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-phone-volume icon"></i>
+                        <p>13333846282</p>
+                    </div>
+                    <!-- email -->
+                    <!-- phone -->
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom-footer">
+            <div class="container ">
+                &copy; <a href="index.html">SamAuto</a> by Samir 2024. All Right Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/register.js"></script>
+
 </body>
+
 </html>

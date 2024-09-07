@@ -1,11 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About Us - SamAuto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.ico">
+
+    <script src="event.js" defer></script>
 </head>
-<body>
-    
+
+<body class="about-page">
+    <header>
+        <div class="container header-wrapper flex justify-between items-center">
+            <a href="index.html" class="header-logo active-link">
+                <img class="header-logo" src="assets/images/Logo-Light.png" />
+            </a>
+
+            <nav class="flex justify-between items-center">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="about.html" class="active-link">
+                    About Us
+                </a>
+                <a href="seller.html">
+                    Seller
+                </a>
+                <a href="cars.html">
+                    Models
+                </a>
+
+            </nav> <a href="search.html" class="search-icon-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <div class="user-icon-wrapper">
+                <i class="fa-regular fa-user icon"></i>
+                <div class="auth-card text-center">
+                    <a href="register.html" class=" btn btn-primary">
+                        Register your account
+                    </a>
+                    <p class="text-sm">Or</p>
+                    <a href="login.html" class=" btn btn-outline">
+                        Login as Seller
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="container flex justify-between left-right-wrapper">
+                <div class="left">
+                    <div class="title-tag">About Us</div>
+                    <h1>
+                        Enjoy Seamless <br> <span>Car Booking</span> With SamAuto </h1>
+                    <p>
+                        SamAuto was established in 2024 and now it is the Australia’s top car listing platform,
+                        connecting multiple dealers with buyers.
+                        offers a streamlined interface for showcasing, browsing, and purchasing vehicles, enhancing the
+                        buying and selling experience.
+                    </p>
+                    <a href="search.html" class="btn btn-primary">Find Cars</a>
+                </div>
+                <div class="right has-image">
+                    <img src="assets/images/about-banner.png" />
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container flex justify-between items-center left-right-wrapper not-hero">
+                <div class="left has-image">
+                    <img src="assets/images/cars/about-car.png" />
+                </div>
+                <div class="right">
+                    <div class="title-tag">Our Mission</div>
+                    <h2>Find <span>Your Perfect Car</span> <br> <span>with SamAuto</span></h2>
+                    <div class="about-desc">
+                        <p>
+                            At SamAuto, our mission is to simplify the car buying and selling process by providing a
+                            comprehensive, user-friendly platform. We connect buyers with top dealers across Australia,
+                            ensuring a seamless experience from browsing to purchase.
+                        </p>
+                        <p>
+                            We are committed to helping you find the best deals on quality vehicles, while offering
+                            dealers the tools they need to showcase their inventory effectively. Trust SamAuto to make
+                            your car journey easier and more enjoyable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------- Services Section -->
+        <section class="our-services-section">
+
+            <div class="section-centered-title">
+                <h2> Our <span>Services</span></h2>
+                <p>
+                    Discover our services: 24/7 support, easy buying/selling, and tools for comparing cars effortlessly.
+                </p>
+            </div>
+            <div class=" flex justify-center services-wrapper flex-wrap">
+
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/icons/call-center.png" />
+                    </div>
+                    <h5>24/7 Customer Support</h5>
+                    <p>
+                        Receive round-the-clock support for any inquiries or issues. We're here to assist you anytime.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/icons/sell.png" />
+                    </div>
+                    <h5>Buy/Sell</h5>
+                    <p>
+                        Easily buy or sell cars with our intuitive platform, simplifying listings and transactions.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/icons/decision.png" />
+                    </div>
+                    <h5>Compare Cars</h5>
+                    <p>
+                        Compare cars side-by-side to evaluate features and prices, making your decision-making process
+                        easie
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ------- Services Section Ends -->
+
+        <!-- ------- Testimonial Section -->
+
+        <section class="testimonial-section">
+
+            <div class="section-centered-title">
+                <h2>What Our <span>Clients Says</span></h2>
+                <p>
+                    Hear from our satisfied customers who have found their perfect car through us. Discover why our
+                    service is trusted by so many for buying and selling vehicles.
+
+                </p>
+            </div>
+            <div class="container flex justify-center  testimonial-wrapper flex-wrap">
+
+                <div class="testimonial-card">
+                    <div class="star-wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimony-text">
+                        SamAuto made finding my ideal car effortless with clear listings and great support. Highly
+                        recommend!
+                    </p>
+
+                    <div class="customer-info-wrapper">
+                        <img src="assets/images/girl-1.png" alt="">
+                        <div>
+                            <div class="customer-name">Ava Martinez</div>
+                            <p class="customer-address">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="star-wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimony-text">
+                        SamAuto’s user-friendly platform and lead tools have boosted my car sales significantly.
+                        Excellent service! </p>
+
+                    <div class="customer-info-wrapper">
+                        <img src="assets/images/girl-2.png" alt="">
+                        <div>
+                            <div class="customer-name">Lian Alexander Smith</div>
+                            <p class="customer-address">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="star-wrapper">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimony-text">
+                        The process with SamAuto was smooth and efficient. Great filters and customer service for
+                        finding my perfect car! </p>
+
+                    <div class="customer-info-wrapper">
+                        <img src="assets/images/boy-3.png" alt="">
+                        <div>
+                            <div class="customer-name">Emily Johnson</div>
+                            <p class="customer-address">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------- Testimonial Section Ends-->
+
+
+    </main>
+    <footer>
+        <div class="top-footer">
+            <div class="container flex justify-between  top-footer-wrapper">
+                <!-- Footer About -->
+                <div class="footer-widget">
+                    <a href="index.html">
+                        <img src="assets/images/Logo-Dark.png" alt="" class="footer-logo">
+                    </a>
+                    <p>
+                        SamAuto is Australia’s top car listing platform, connecting multiple dealers with buyers.
+                    </p>
+                    <div class="footer-contact-info">
+                        <div class="contact-list"></div>
+                        <div class="contact-list"></div>
+                    </div>
+                    <div class="footer-social space-y-6">
+                        <h4>Follow Us</h4>
+                        <div class="icon-wrapper flex items-center">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Footer Quick Links -->
+                <div class="footer-widget">
+                    <h5 class="widget-title">Quick Links</h5>
+                    <nav class="quick-links flex flex-col">
+                        <a href="index.html">
+                            Home
+                        </a>
+                        <a href="cars.html">
+                            Models
+                        </a>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </nav>
+                </div>
+
+
+
+
+                <!-- Footer Product -->
+                <div class="footer-widget car-list-widget">
+                    <h5 class="widget-title">Popular Cars</h5>
+                    <div class="flex flex-col car-items-wrapper">
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-1.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Ford Mustang Cabrio
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-2.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Porsche 911 Turbo
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-3.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Lamborghini Urus
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer Contact -->
+                <div class="footer-widget contact-widget">
+                    <h5 class="widget-title">Contact Us</h5>
+                    <!-- location -->
+                    <div class="flex">
+                        <i class="fa-solid fa-location-dot icon"></i>
+                        <p>Sam St, Lievrpool NSW 2170, Australia</p>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <a href="mailto:contact@samauto.com.au">
+                            contact@samauto.com.au</a>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-phone-volume icon"></i>
+                        <p>13333846282</p>
+                    </div>
+                    <!-- email -->
+                    <!-- phone -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="bottom-footer">
+            <div class="container ">
+                &copy; <a href="index.html">SamAuto</a> by Samir 2024. All Right Reserved
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

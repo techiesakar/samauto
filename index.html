@@ -4,13 +4,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HomePage - SamAuto</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.ico">
+
     <link rel="stylesheet" href="style.css">
+    <script src="event.js" defer></script>
 </head>
 
-<body>
-    <input placeholder="heheh" />
-    <button>Submit Here</button>
+<body class="home-page">
+    <header>
+        <div class="container header-wrapper flex justify-between items-center">
+            <a href="index.html" class="header-logo active-link">
+                <img class="header-logo" src="assets/images/Logo-Light.png" />
+            </a>
+
+            <nav class="flex justify-between items-center">
+                <a href="index.html" class="active-link">
+                    Home
+                </a>
+                <a href="about.html">
+                    About Us
+                </a>
+                <a href="seller.html">
+                    Seller
+                </a>
+                <a href="cars.html">
+                    Models
+                </a>
+
+            </nav> <a href="search.html" class="search-icon-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <div class="user-icon-wrapper">
+                <i class="fa-regular fa-user icon"></i>
+                <div class="auth-card text-center">
+                    <a href="register.html" class=" btn btn-primary">
+                        Register your account
+                    </a>
+                    <p class="text-sm">Or</p>
+                    <a href="login.html" class=" btn btn-outline">
+                        Login as Seller
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="container flex justify-between hero-wrapper items-center">
+                <div class="left">
+                    <h1>
+                        Buy The <span>Best Quality</span> <br> <span>Car's </span> With Us
+                    </h1>
+                    <p>
+                        SamAuto is Australia’s top car listing platform, connecting multiple dealers with buyers. </p>
+                    <div class="flex items-center button-wrapper">
+                        <a href="cars.html" class="btn btn-primary">Book a Car</a>
+                        <a href="login.html" class="btn-outline btn">Sell a Car</a>
+                    </div>
+                </div>
+                <div class="right has-image">
+                    <img src="assets/images/cars/hero-image.png" />
+                </div>
+            </div>
+        </section>
+
+        <form class="search-form">
+            <input type="text" placeholder="Model Name" name="model">
+            <input type="text" placeholder="Location" name="location">
+            <select name="brand" id="brand">
+                <option value="" disabled selected>Select Brand</option>
+                <option value="honda">
+                    Honda
+                </option>
+                <option value="honda">
+                    Lamborghini
+                </option>
+            </select>
+            <select name="seat" id="seat">
+                <option value="" disabled selected>Select Seat</option>
+
+                <option value="1">
+                    One
+                </option>
+                <option value="2">
+                    Two
+                </option>
+                <option value="3">
+                    Three
+                </option>
+                <option value="4">
+                    Four
+                </option>
+                <option value="5">
+                    Five
+                </option>
+                <option value="6">
+                    Six
+                </option>
+                <option value="7">
+                    Seven
+                </option>
+                <option value="8">
+                    Eight
+                </option>
+
+            </select>
+
+            <a href="search.html" class="btn btn-primary">Search</a>
+
+        </form>
+
+        <section class="about-section">
+            <div class="container flex justify-between items-center left-right-wrapper not-hero">
+                <div class="left has-image">
+                    <img src="assets/images/cars/about-car.png" />
+                </div>
+                <div class="right">
+                    <div class="section-title">About Us</div>
+                    <h2>Get The <span>Best Deals</span> <br> <span>with our</span> SamAuto</h2>
+                    <div class="about-desc">
+                        <p>
+                            At SamAuto, our mission is to simplify the car buying and selling process by providing a
+                            comprehensive, user-friendly platform. We connect buyers with top dealers across Australia,
+                            ensuring a seamless experience from browsing to purchase.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Car Carousel Starts -->
+        <section class="car-gallery-section">
+            <div class="car-gallery-wrapper">
+                <h2 class="section-title text-center">Top Rated Dealer</h2>
+                <div class="subtitle text-center">Explore Our Top Deal</div>
+                <div class="brand-tabs flex items-center justify-center">
+                    <button>
+                        All
+                    </button>
+                    <button>
+                        Audi
+                    </button><button>
+                        Nissan
+                    </button><button>
+                        Mazda
+                    </button><button>
+                        Toyota
+                    </button>
+                </div>
+                <div class="car-gallery flex">
+                    <!-- car one -->
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-1.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Ford Mustang Cabrio
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Two -->
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-2.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Porsche 911 Turbo
+
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car three -->
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-3.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Lamborghini Urus
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car four -->
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-4.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Range Rover Sport
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car five -->
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-5.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Ferrari F8 Tributo
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car six -->
+
+                    <div class="car-card">
+                        <div class="image-wrapper">
+                            <img src="assets/images/cars/car-6.png" alt="">
+                        </div>
+                        <div class="car-body">
+                            <div class="car-desc  items-center">
+                                <div class="car-title">
+                                    Audi Q7
+                                </div>
+                                <div class="price">
+                                    $ 120,000
+                                </div>
+                            </div>
+
+                            <div class="car-specs">
+                                <div>
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gears"></i>
+                                    Auto 20k
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gas-pump"></i> Petrol
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="load-more-btn btn">Load More</button>
+                </div>
+            </div>
+        </section>
+        <!-- Car Carousel Ends -->
+    </main>
+    <footer>
+        <div class="top-footer">
+            <div class="container flex justify-between  top-footer-wrapper">
+                <!-- Footer About -->
+                <div class="footer-widget">
+                    <a href="index.html">
+                        <img src="assets/images/Logo-Dark.png" alt="" class="footer-logo">
+                    </a>
+                    <p>
+                        SamAuto is Australia’s top car listing platform, connecting multiple dealers with buyers.
+                    </p>
+                    <div class="footer-contact-info">
+                        <div class="contact-list"></div>
+                        <div class="contact-list"></div>
+                    </div>
+                    <div class="footer-social space-y-6">
+                        <h4>Follow Us</h4>
+                        <div class="icon-wrapper flex items-center">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Footer Quick Links -->
+                <div class="footer-widget">
+                    <h5 class="widget-title">Quick Links</h5>
+                    <nav class="quick-links flex flex-col">
+                        <a href="index.html">
+                            Home
+                        </a>
+                        <a href="cars.html">
+                            Models
+                        </a>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </nav>
+                </div>
+
+
+
+
+                <!-- Footer Product -->
+                <div class="footer-widget car-list-widget">
+                    <h5 class="widget-title">Popular Cars</h5>
+                    <div class="flex flex-col car-items-wrapper">
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-1.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Ford Mustang Cabrio
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-2.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Porsche 911 Turbo
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                        <div class="flex car-item">
+                            <div class="image-card">
+                                <img src="assets/images/cars/car-3.png" />
+                            </div>
+                            <a href="index.html" class="item-link">
+                                <p>Lamborghini Urus
+                                </p>
+                                <span class="price">$ 120,000</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="footer-widget contact-widget">
+                    <h5 class="widget-title">Contact Us</h5>
+                    <!-- location -->
+                    <div class="flex">
+                        <i class="fa-solid fa-location-dot icon"></i>
+                        <p>Sam St, Lievrpool NSW 2170, Australia</p>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <a href="mailto:contact@samauto.com.au">
+                            contact@samauto.com.au</a>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-phone-volume icon"></i>
+                        <p>13333846282</p>
+                    </div>
+                    <!-- email -->
+                    <!-- phone -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="bottom-footer">
+            <div class="container ">
+                &copy; <a href="index.html">SamAuto</a> by Samir 2024. All Right Reserved
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

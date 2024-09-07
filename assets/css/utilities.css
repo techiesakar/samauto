@@ -4,6 +4,7 @@
     width: 100%;
     max-width: 1320px;
     padding: 0 16px;
+    margin: 0 auto;
 }
 
 .flex {
@@ -30,6 +31,10 @@
     justify-content: center;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 /* Typography */
 .text-center {
     text-align: center;
@@ -41,4 +46,153 @@
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+
+
+/* position */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* form */
+
+.error-message {
+    font-size: 12px;
+    display: none;
+}
+
+/* --------------------- Hero Section ---------- */
+
+.hero-section {
+    padding: 42px 0;
+}
+
+@media screen and (max-width:600px) {
+    .hero-section {
+        padding: 26px 0;
+    }
+}
+
+
+
+/* ---------- For Left and Right with image on atleast one side */
+
+.left-right-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .left-right-wrapper {
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+}
+
+.left-right-wrapper .title-tag {
+    color: var(--primary);
+    font-family: 18px;
+    font-weight: 500;
+}
+
+.left-right-wrapper>* {
+    width: 48%;
+}
+
+.left-right-wrapper h1 {
+    font-weight: 700;
+    font-family: 42px;
+}
+
+
+
+.left-right-wrapper h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:600px) {
+    .left-right-wrapper h2 {
+        font-size: 24px;
+    }
+}
+
+
+.left-right-wrapper h1 span,
+.left-right-wrapper h2 span {
+    color: var(--primary)
+}
+
+.left-right-wrapper .btn {
+    display: inline-block;
+    padding: 14px 24px;
+}
+
+.left-right-wrapper div>* {
+    margin-bottom: 18px;
+}
+
+.left-right-wrapper.not-hero {
+    p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .left-right-wrapper>* {
+        width: 100% !important;
+    }
+}
+
+.left-right-wrapper .has-image img {
+    max-width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .left-right-wrapper .has-image {
+        display: none;
+    }
+}
+
+
+/* ----------- For section centered Title */
+
+.section-centered-title {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 0 16px;
+}
+
+.section-centered-title h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:600px) {
+    .section-centered-title h2 {
+        font-size: 24px;
+    }
+}
+
+.section-centered-title h2 span {
+    color: var(--primary);
+}
+
+.section-centered-title p {
+    font-size: 14px;
 }

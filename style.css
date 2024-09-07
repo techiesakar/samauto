@@ -1,15 +1,20 @@
 /* Importing the required css */
 
 @import url("./assets/css/fonts.css");
+/* common classes */
 @import url("./assets/css/utilities.css");
 
 
 :root {
-    --primary: rgb(255, 191, 48);
-    --secondary: rgb(0, 120, 255);
-    --secondary-light: rgb(0, 205, 255);
-    --text: rgb(13, 13, 12);
-    --text-muted: rgb(180, 178, 178);
+    --primary: #FB493F;
+    --primary-light: #fb483fac;
+    --secondary: #0078ff;
+    --secondary-light: #00cdff;
+    --text: #0d0d0c;
+    --text-muted: #b4b2b2;
+    --footer-bg: #1F1F39;
+    --footer-bg-light: #1f1f39f9;
+    --text-sm: 13px;
 }
 
 /* Normalization */
@@ -18,19 +23,21 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    transition: 0.2s linear;
 }
 
 a {
     text-decoration: none;
+    color: var(--text)
 }
 
-input {
+input,
+select {
     outline: none;
     border: 1px solid rgb(212, 209, 209);
-    border-radius: 4px;
-    height: 34px;
-    padding: 3px 4px;
+    border-radius: 8px;
+    height: 40px;
+    padding: 3px 6px;
+    transition: 0.2s ease-in
 }
 
 input::placeholder {
@@ -41,25 +48,739 @@ input:focus::placeholder {
     visibility: hidden;
 }
 
-input:focus {
-    background-color: var(--primary);
-    color: white
-}
 
-button {
+button,
+.btn-primary {
     background-color: var(--primary);
     outline: none;
-    border: 0;
-    height: 34px;
-    padding: 3px 10px;
     color: white;
-    font-weight: 500;
+    border: 0;
+}
+
+.btn-outline {
+    background-color: white;
+    border: 1px solid red;
+}
+
+button,
+.btn {
+    min-height: 34px;
+    padding: 3px 10px;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--text-sm);
+    transition: 0.3s ease-in-out;
+}
+
+button:hover,
+.btn:hover {
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background-color: white;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.2s linear;
+
+}
+
+/* ------------------------------  header ---------------------------- */
+header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.header-wrapper {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 80px;
+    gap: 16px;
+}
+
+.header-logo {
+    display: block;
+    width: fit-content;
+    height: 50px;
+}
+
+header nav {
+    margin: 0 auto;
+}
+
+@media screen and (max-width:768px) {
+    header nav {
+        display: none !important;
+    }
+}
+
+header nav a {
+    padding: 0px 16px;
+}
+
+header nav a:hover,
+.active-link {
+    color: var(--primary)
+}
+
+@media screen and (max-width:768px) {
+    header .search-icon-wrapper {
+        margin-left: auto;
+    }
+}
+
+/* header nav */
+
+.auth-card {
+    position: absolute;
+    bottom: -125px;
+    overflow: hidden;
+    visibility: hidden;
+    background-color: white;
+    padding: 12px;
+    width: 200px;
+    border-radius: 16px;
+    opacity: 0;
+    right: 0;
+    transition: 0.3s ease-in;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.auth-card .icon {
+    position: relative;
+}
+
+.user-icon-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--secondary-light);
+.user-icon-wrapper:hover .auth-card {
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+    height: fit-content;
+    position: absolute;
+    bottom: -130px;
+
 }
 
-/*  */
+.auth-card a {
+    width: 100%;
+    display: inline-block;
+    font-size: var(--text-sm);
+    border-radius: 20px;
+    padding: 10px 8px !important;
+}
+
+.auth-card .register-link {
+    background-color: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.auth-card .register-link:hover {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.auth-card p {
+    margin: 4px 0;
+    cursor: auto;
+}
+
+/* ----------------------- Header Ends ------------------ */
+
+
+/* ------------------------- Footer --------------------*/
+
+footer {
+
+    color: white;
+}
+
+.top-footer {
+    padding: 34px 0;
+    background-color: var(--footer-bg);
+}
+
+.top-footer-wrapper {
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-widget {
+    width: 20%;
+}
+
+@media screen and (max-width:600px) {
+    .footer-widget {
+        width: 100%;
+    }
+}
+
+.footer-widget>*,
+.footer-social>* {
+    margin-bottom: 16px;
+}
+
+
+
+.footer-widget p {
+    font-size: var(--text-sm);
+}
+
+.footer-logo {
+    width: auto;
+    height: 50px;
+}
+
+footer .icon-wrapper {
+    gap: 16px;
+}
+
+footer .icon-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    color: white;
+    background-color: var(--footer-bg-light);
+    transition: 0.2s ease-in
+}
+
+footer .icon-wrapper a:hover {
+    background-color: var(--primary);
+}
+
+.widget-title {
+    font-size: 17px;
+}
+
+.quick-links {
+    gap: 10px;
+}
+
+.quick-links a {
+    color: white;
+    font-size: var(--text-sm);
+    transition: 0.2s ease-in;
+}
+
+.quick-links a:hover {
+    color: var(--primary);
+}
+
+.contact-widget a {
+    color: white;
+    font-size: var(--text-sm);
+}
+
+.contact-widget .icon {
+    margin-right: 8px;
+}
+
+
+
+/* car widget */
+
+
+.car-list-widget .car-items-wrapper {
+    gap: 10px;
+}
+
+
+.car-list-widget .car-items-wrapper .car-item {
+    gap: 8px;
+}
+
+.car-list-widget .image-card {
+    background-color: white;
+    padding: 2px;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 80px;
+    height: 60px;
+}
+
+.car-list-widget .image-card img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.car-list-widget .item-link {
+    font-size: var(--text-sm);
+    color: white;
+}
+
+
+
+/* bottom footer */
+
+.bottom-footer {
+    padding: 16px 0;
+    font-size: var(--text-sm);
+    text-align: center;
+    background-color: var(--footer-bg-light);
+}
+
+.bottom-footer a {
+    color: white;
+}
+
+/* --------------------------- footer ends ------------------------ */
+
+/* This is for any form inside the webpage */
+
+
+.form-section {
+    padding: 40px 0;
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 18px;
+    box-shadow: rgba(17, 17, 26, 0.1) 4px 0px 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+}
+
+.title-wrapper {
+    text-align: center;
+}
+
+.title-wrapper h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+form {
+    padding: 20px 16px;
+}
+
+form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+form .form-field span {
+    color: red;
+}
+
+form button {
+    width: 100%;
+    border-radius: 24px;
+    padding: 12px;
+}
+
+
+/* for auth form */
+
+.change-mind {
+    text-align: center;
+    font-size: 14px;
+
+
+}
+
+.change-mind a {
+    color: var(--primary);
+}
+
+
+/* ----------------------------HomePage Only ----------------------- */
+/* ------------------Home Hero Section -------------- */
+
+
+.home-page .hero-wrapper {
+    gap: 20px;
+    height: 520px;
+}
+
+@media screen and (max-width:600px) {
+    .home-page .hero-wrapper {
+        height: 320px;
+    }
+}
+
+.home-page .hero-wrapper h1 {
+    font-size: 42px;
+}
+
+@media screen and (max-width:600px) {
+    .home-page .hero-wrapper h1 {
+        font-size: 28px;
+    }
+}
+
+.home-page .hero-wrapper h1 span {
+    color: var(--primary)
+}
+
+.home-page .hero-wrapper .button-wrapper {
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.home-page .hero-wrapper .button-wrapper a {
+    padding: 14px 24px;
+    border-radius: 8px;
+}
+
+.home-page .hero-wrapper .left,
+.home-page .hero-wrapper .right {
+    width: 50%;
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    .home-page .hero-wrapper .left,
+    .home-page .hero-wrapper .right {
+        width: 100%;
+    }
+}
+
+.home-page .hero-wrapper .right img {
+    max-width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .home-page .hero-section .right {
+        display: none;
+    }
+}
+
+/* -------------------- Home Hero Ends ----------- */
+
+
+
+
+
+/* Car Gallery Section is Reusable - can be used in multiple pages */
+.car-gallery-section {
+    padding: 42px 0;
+}
+
+.car-gallery-wrapper {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.subtitle {
+    font-size: 32px;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+.brand-tabs {
+    gap: 8px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: auto;
+}
+
+.brand-tabs button {
+    width: 100px;
+    padding: 10px 24px;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.brand-tabs button:nth-child(1) {
+    background-color: var(--primary);
+    color: white;
+}
+
+.brand-tabs button:hover {
+    color: white;
+}
+
+.car-gallery {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.car-gallery .car-card {
+    background-color: white;
+    width: 32%;
+    box-shadow: rgba(17, 17, 26, 0.1) 4px 0px 16px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.car-gallery .car-card .image-wrapper {
+    padding: 40px;
+    border: 8px;
+    background-color: rgb(246, 244, 244);
+    border-radius: 12px;
+}
+
+.car-gallery .car-card .image-wrapper img {
+    width: 100%;
+}
+
+.car-gallery .car-card .car-body {
+    padding: 18px;
+}
+
+.car-gallery .car-card .car-body .car-desc {
+    font-size: 18px;
+    padding-bottom: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.car-gallery .car-card .car-body .car-desc .price {
+    color: rgb(142, 141, 141);
+}
+
+.car-gallery .car-card .car-body .car-specs {
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+    color: rgb(142, 141, 141);
+    font-size: 15px;
+}
+
+.load-more-btn {
+    padding: 14px 24px;
+    margin-top: 18px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .car-gallery .car-card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .car-gallery .car-card {
+        width: 100%;
+    }
+}
+
+
+/* ----------------------- Form ----------------------- */
+
+/* ------- Seller and signup form ----- */
+
+.seller-form,
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.seller-form .form-field,
+.signup-form .form-field {
+    width: 49%;
+}
+
+
+/* -------------- Search Form ---------------- */
+.search-form {
+    padding: 34px 20px;
+    gap: 6px;
+    flex-wrap: wrap;
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto 34px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+
+
+.search-form a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.search-form>* {
+    width: 19%;
+}
+
+@media screen and (max-width: 600px) {
+    .search-form>* {
+        width: 30%;
+    }
+}
+
+
+
+/* --------------------------------------  Testimonial Section ------------------------------*/
+.testimonial-wrapper {
+    gap: 16px;
+}
+
+.testimonial-section {
+    padding: 40px 0;
+}
+
+/* section centered title can be found in utilities */
+
+.testimonial-section .testimonial-card {
+    width: 32%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+/* Media Query for responsive design */
+
+
+
+@media (max-width: 768px) {
+    .testimonial-section .testimonial-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 420px) {
+    .testimonial-section .testimonial-card {
+        width: 100% !important;
+    }
+}
+
+
+
+.testimonial-section .testimonial-card>* {
+    margin-bottom: 18px;
+}
+
+.testimonial-section .testimonial-card i.fa-star {
+    color: var(--primary);
+}
+
+.testimonial-section .testimonial-card .testimony-text {
+    font-size: 14px;
+}
+
+.testimonial-section .testimonial-card .customer-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.testimonial-section .testimonial-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.testimonial-section .testimonial-card .customer-name {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.testimonial-section .testimonial-card .customer-address {
+    color: var(--footer-bg-light);
+    font-size: 14px;
+}
+
+/* ----------------- Testimonial Ends ----------------------- */
+
+
+
+
+/* ----------------- our services section ----------------------- */
+
+.our-services-section {
+    padding: 40px 0;
+}
+
+/* section centered title is placed inside utilities */
+.our-services-section .services-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    gap: 18px;
+    padding: 0 16px;
+}
+
+.our-services-section .service-card {
+    width: 32%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .our-services-section .service-card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .our-services-section .service-card {
+        width: 100%;
+    }
+}
+
+.our-services-section .service-card .card-image {
+    padding: 24px;
+    border-radius: 100%;
+    background-color: #FEF0E7;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.our-services-section .service-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our-services-section .service-card h5 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.our-services-section .service-card p {
+    font-size: 14px;
+}
